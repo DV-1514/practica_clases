@@ -3,7 +3,7 @@ package practica_clases;
 public class practica3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
 		
 		Empleados empleado1=new Empleados("Dante");
@@ -11,7 +11,10 @@ public class practica3 {
 		Empleados empleado3=new Empleados("Lautaro");
 		Empleados empleado4=new Empleados("Mati");
 		
+
 		empleado1.cambiaSeccion("Servicios");
+
+		empleado2.cambiaSeccion("logistica");
 		
 		System.out.println(empleado1.dame_seccion());
 	
@@ -31,7 +34,7 @@ class Empleados{
 		
 		nombre=nom;
 		
-		seccion="administración";
+		seccion="administraciÃ³n";
 		
 		id=idsiguiente;
 		

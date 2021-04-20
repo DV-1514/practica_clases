@@ -4,7 +4,7 @@ import java.util.*;
 public class practica2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 		// instancias
 	/*amigos amigo1=new amigos("Alberto", 24, "Municipal", 1997, 4, 22);
@@ -19,7 +19,7 @@ public class practica2 {
 		//instancias con arrays o matriz
 	
 	
-		jefatura jefe=new jefatura("Juan", 40, "Administración", 1950, 12, 11); 
+		jefatura jefe=new jefatura("Juan", 40, "Administraciï¿½n", 1950, 12, 11); 
 			
 			jefe.suma_trabajo("Logistica");
 			
