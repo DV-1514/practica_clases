@@ -33,7 +33,7 @@ public class practica2 {
 	misAmigos[2]=new amigos("Dante");
 	misAmigos[3]=jefe; //polimorfismo _ principio de sustitucion
 	
-	
+	Arrays.sort(misAmigos);
 	
 	for (int i=0; i<4; i++) {
 		System.out.println("Nombre: " + misAmigos[i].dame_nombre() + " Edad: " + 
@@ -48,7 +48,7 @@ public class practica2 {
 	
 }
 
-class amigos{
+class amigos implements Comparable {
 	
 	public amigos(String nom, int ed, String job, int agno, int mes, int dia) {//constructor 1
 		
@@ -92,7 +92,21 @@ class amigos{
 		
 	}
 	
-	
+	public int compareTo(Object miObjeto){
+
+		amigos otroAmigo=(amigos) miObjeto;
+
+		if(this.edad<otroAmigo.edad){
+			
+			return -1;
+
+		}
+		if(this.edad>otroAmigo.edad){
+
+			return 1;
+
+		}return 0;
+	}
 	
 	private String nombre;
 	
