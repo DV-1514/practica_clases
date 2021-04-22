@@ -33,6 +33,9 @@ public class practica2 {
 	misAmigos[2]=new amigos("Dante");
 	misAmigos[3]=jefe; //polimorfismo _ principio de sustitucion
 	
+	System.out.println(jefe.tomarDecisiones("Despedir a todos")); //interfaz creada "jefes"
+	System.out.println("el jefe " + jefe.dame_nombre() + " tiene un bonus de " + jefe.estableceBonus(500)); //interfaz creada "trabajadores"
+	System.out.println("yo " + misAmigos[2].dame_nombre() +  " tiene un bonus de " + misAmigos[2].estableceBonus(500)); //interfaz creada "trabajadores"
 	Arrays.sort(misAmigos);
 	
 	for (int i=0; i<4; i++) {
@@ -41,14 +44,10 @@ public class practica2 {
 	misAmigos[i].dame_fecha());
 	}
 	
-	
-	
 	}
-	
-	
 }
 
-class amigos implements Comparable {
+class amigos implements Comparable, trabajadores {
 	
 	public amigos(String nom, int ed, String job, int agno, int mes, int dia) {//constructor 1
 		
@@ -107,6 +106,9 @@ class amigos implements Comparable {
 
 		}return 0;
 	}
+	public double estableceBonus(double bonus){
+		return trabajadores.bonus_base+bonus;
+	}
 	
 	private String nombre;
 	
@@ -118,7 +120,7 @@ class amigos implements Comparable {
 	
 }
 
-class jefatura extends amigos{
+class jefatura extends amigos implements jefes {
 	
 	public jefatura(String nom, int ed, String job, int agno, int mes, int dia) {
 		
@@ -138,6 +140,14 @@ class jefatura extends amigos{
 		return trabajo;
 	}
 	
+	public String tomarDecisiones(String desicion){
+		return "un miembro de la direccion ha tomado la desicion de: " + desicion;
+	}
+
+	public double estableceBonus(double bonus){
+		double prima=2000;
+		return trabajadores.bonus_base+bonus+prima;
+	}
 	
 	private String trabajo;
 }
