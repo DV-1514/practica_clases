@@ -1,6 +1,8 @@
 package practica_clases;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
+
+import java.awt.Toolkit;
 import java.awt.event.*;
 import java.util.*;
 
@@ -30,6 +32,8 @@ class DamelaHora implements ActionListener{
         Date ahora=new Date();
 
         System.out.println("te doy la hora " + ahora);
+
+        Toolkit.getDefaultToolkit().beep();
 
         
 
