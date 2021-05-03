@@ -12,8 +12,7 @@ public class practica8_intGraficas {
         //Texto texto=new Texto();
         //marco1.add(texto);
 
-        Figura figura=new Figura();
-        marco1.add(figura);
+        
     }
 
 }
@@ -22,7 +21,7 @@ class miMarco extends JFrame{
 
     public miMarco(){
 
-        Toolkit herramienta=Toolkit.getDefaultToolkit();
+        /*Toolkit herramienta=Toolkit.getDefaultToolkit();
 
         Dimension pantalla=herramienta.getScreenSize();
     
@@ -38,11 +37,12 @@ class miMarco extends JFrame{
 
         setResizable(true);
 
-         setExtendedState(Frame.MAXIMIZED_HORIZ);
+        setExtendedState(Frame.MAXIMIZED_HORIZ);*/
 
-        //setSize(500,300);
+        setSize(500,300);
 
-
+        Figura figura=new Figura();
+        add(figura);
 
     }
 
@@ -78,9 +78,9 @@ class Figura extends JPanel{ //se crea una lamina encima del frame
 
         super.paintComponent(g); //ademas de decirle que haga lo que quiero, que haga para lo que fue creado
 
-        Graphics2D g2=(Grafhics) g;
+        Graphics2D g2=(Graphics2D) g;
 
-        Rectangle2D rectangulo=new Rectangle2D.Double();
+        Rectangle2D rectangulo=new Rectangle2D.double(80, 80, 100, 170);
 
         g2.draw(rectangulo);
 
