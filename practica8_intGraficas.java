@@ -1,7 +1,6 @@
 package practica_clases;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom;
 public class practica8_intGraficas {
 
     public static void main(String[] args){
@@ -21,7 +20,7 @@ class miMarco extends JFrame{
 
     public miMarco(){
 
-        /*Toolkit herramienta=Toolkit.getDefaultToolkit();
+        Toolkit herramienta=Toolkit.getDefaultToolkit();
 
         Dimension pantalla=herramienta.getScreenSize();
     
@@ -37,7 +36,7 @@ class miMarco extends JFrame{
 
         setResizable(true);
 
-        setExtendedState(Frame.MAXIMIZED_HORIZ);*/
+        setExtendedState(Frame.MAXIMIZED_HORIZ);
 
         setSize(500,300);
 
@@ -59,7 +58,7 @@ class miMarco extends JFrame{
     }
 
 }
-
+*/
 class Figura extends JPanel{ //se crea una lamina encima del frame
 
     public void paintComponent(Graphics g){  //sobreescribiendo los datos
@@ -71,19 +70,5 @@ class Figura extends JPanel{ //se crea una lamina encima del frame
     }
 
 }
-*/
-class Figura extends JPanel{ //se crea una lamina encima del frame
 
-    public void paintComponent(Graphics g){  //sobreescribiendo los datos
 
-        super.paintComponent(g); //ademas de decirle que haga lo que quiero, que haga para lo que fue creado
-
-        Graphics2D g2=(Graphics2D) g;
-
-        Rectangle2D rectangulo=new Rectangle2D.double(80, 80, 100, 170);
-
-        g2.draw(rectangulo);
-
-    }
-
-}
